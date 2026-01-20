@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | Shopping Cart</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="index.html">ShopEase</a>
+        <nav>
+          <a href="index.html">Catalog</a>
+          <a class="active" href="cart.html">Cart</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-outline" href="login.html">Login</a>
+          <a class="icon-button" href="cart.html" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count" data-cart-count></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1>Your Shopping Cart</h1>
+      <p class="product-description">
+        Review your items, adjust quantities, and move to checkout.
+      </p>
+
+      <section class="cart-layout" style="margin-top: 24px;">
+        <div id="cartItems"></div>
+        <aside class="summary-card">
+          <h2>Cart Summary</h2>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="subtotal">$0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <strong id="shipping">$8.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Grand Total</span>
+            <strong id="grandTotal">$0.00</strong>
+          </div>
+          <a class="button button-accent" href="checkout.html">Checkout</a>
+        </aside>
+      </section>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="cart.js"></script>
+  </body>
+</html>
