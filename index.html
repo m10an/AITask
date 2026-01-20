@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | Product Catalog</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="index.html">ShopEase</a>
+        <nav>
+          <a class="active" href="index.html">Catalog</a>
+          <a href="cart.html">Cart</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-outline" href="login.html">Login</a>
+          <a class="icon-button" href="cart.html" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count" data-cart-count></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Discover essentials for modern living.</h1>
+          <p class="product-description">
+            Browse our curated catalog with live search, category filters, and
+            price sorting.
+          </p>
+        </div>
+      </section>
+
+      <section class="filters">
+        <input
+          class="input"
+          id="searchInput"
+          type="search"
+          placeholder="Search by product name"
+        />
+        <select id="categoryFilter">
+          <option value="all">All categories</option>
+        </select>
+        <select id="priceSort">
+          <option value="default">Sort by price</option>
+          <option value="low">Low to high</option>
+          <option value="high">High to low</option>
+        </select>
+      </section>
+
+      <section class="product-grid" id="productGrid"></section>
+    </main>
+
+    <div class="modal" id="detailsModal" aria-hidden="true">
+      <div class="modal-content">
+        <h2 id="modalTitle"></h2>
+        <p id="modalDescription"></p>
+        <p id="modalDetails"></p>
+        <p class="product-price" id="modalPrice"></p>
+        <button class="button button-primary" id="modalAdd">Add to cart</button>
+        <button class="button button-outline" id="modalClose">Close</button>
+      </div>
+    </div>
+
+    <script src="common.js"></script>
+    <script src="catalog.js"></script>
+  </body>
+</html>

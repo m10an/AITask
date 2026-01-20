@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | Checkout</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="index.html">ShopEase</a>
+        <nav>
+          <a href="index.html">Catalog</a>
+          <a class="active" href="cart.html">Cart</a>
+          <a href="about.html">About</a>
+        </nav>
+        <div class="header-actions">
+          <a class="button button-outline" href="login.html">Login</a>
+          <a class="icon-button" href="cart.html" aria-label="Shopping cart">
+            🛒
+            <span class="cart-count" data-cart-count></span>
+          </a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <h1>Checkout</h1>
+      <p class="product-description">
+        Provide shipping information and select your payment method.
+      </p>
+
+      <section class="cart-layout" style="margin-top: 24px;">
+        <form class="summary-card" id="checkoutForm">
+          <h2>Shipping Details</h2>
+          <div class="form-grid">
+            <input class="input" name="fullName" placeholder="Full name" required />
+            <input class="input" name="email" type="email" placeholder="Email" required />
+            <input class="input" name="phone" type="tel" placeholder="Phone (optional)" />
+            <input class="input" name="address" placeholder="Address" required />
+            <input class="input" name="city" placeholder="City" required />
+            <input class="input" name="postal" placeholder="Postal code" required />
+          </div>
+
+          <h3 style="margin-top: 16px;">Delivery Option</h3>
+          <div class="form-grid">
+            <label><input type="radio" name="delivery" value="standard" checked /> Standard</label>
+            <label><input type="radio" name="delivery" value="express" /> Express</label>
+          </div>
+
+          <h3 style="margin-top: 16px;">Payment Option</h3>
+          <div class="form-grid">
+            <label><input type="radio" name="payment" value="card" checked /> Card</label>
+            <label><input type="radio" name="payment" value="cod" /> Cash on Delivery</label>
+          </div>
+
+          <button class="button button-accent" type="submit">Place order</button>
+        </form>
+
+        <aside class="summary-card">
+          <h2>Order Summary</h2>
+          <div id="orderItems"></div>
+          <div class="summary-row">
+            <span>Subtotal</span>
+            <strong id="checkoutSubtotal">$0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Shipping</span>
+            <strong id="checkoutShipping">$0.00</strong>
+          </div>
+          <div class="summary-row">
+            <span>Grand Total</span>
+            <strong id="checkoutTotal">$0.00</strong>
+          </div>
+        </aside>
+      </section>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="checkout.js"></script>
+  </body>
+</html>

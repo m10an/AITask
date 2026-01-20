@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ShopEase | Login</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-inner">
+        <a class="logo" href="index.html">ShopEase</a>
+        <div class="header-actions">
+          <a class="button button-primary" href="register.html">Register</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="auth-wrapper">
+        <div id="loginView">
+          <h1>Welcome back</h1>
+          <p class="product-description">Login to view your profile and orders.</p>
+          <form class="auth-form" id="loginForm">
+            <input class="input" name="email" type="email" placeholder="Email" required />
+            <input
+              class="input"
+              name="password"
+              type="password"
+              placeholder="Password"
+              required
+            />
+            <button class="button button-primary" type="submit">Login</button>
+          </form>
+        </div>
+
+        <div id="profileView" style="display: none;">
+          <h1>Account Overview</h1>
+          <div class="profile-card">
+            <p><strong>Name:</strong> <span id="profileName"></span></p>
+            <p><strong>Email:</strong> <span id="profileEmail"></span></p>
+            <button class="button button-outline" id="logoutBtn">Logout</button>
+          </div>
+
+          <div class="profile-card">
+            <h2>Order History</h2>
+            <div class="order-list" id="orderHistory"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="login.js"></script>
+  </body>
+</html>
